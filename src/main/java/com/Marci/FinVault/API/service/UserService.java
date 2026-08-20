@@ -9,7 +9,4 @@ public class UserService {
 
     private UserRepository userRepository;
 
-    public AuthResponse login(LoginRequest loginRequest) {
-        User user = userRepository.findByEmailAndPassword(loginRequest.getEmail(), loginRequest.getPassword());
-    }
 }
