@@ -1,0 +1,39 @@
+spring.application.name=FinVault-API
+
+server.port=8080
+
+# Logging / console
+spring.output.ansi.enabled=ALWAYS
+
+# File uploads
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
+
+# PostgreSQL / Amazon RDS
+spring.datasource.url=jdbc:postgresql://your-rds-host:5432/your-database
+spring.datasource.username=your-database-username
+spring.datasource.password=your-database-password
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+
+# AWS S3
+aws.s3.bucket-name=your-s3-bucket-name
+aws.region=us-east-1
+aws.access-key-id=your-aws-access-key-id
+aws.secret-access-key=your-aws-secret-access-key
+
+# Jackson
+spring.jackson.deserialization.FAIL_ON_UNKNOWN_PROPERTIES=false
+
+# Security
+spring.security.enabled=true
+
+# AWS Cognito
+aws.cognito.region=us-east-1
+aws.cognito.domain=your-cognito-domain.auth.us-east-1.amazoncognito.com
+aws.cognito.client-id=your-cognito-client-id
+aws.cognito.client-secret=your-cognito-client-secret
+aws.cognito.redirect-uri=http://localhost:5173
+aws.cognito.logout-uri=http://localhost:5173
+aws.cognito.user-pool-client-id=us-east-1_your-user-pool-id
+aws.cognito.issuer-uri=https://cognito-idp.us-east-1.amazonaws.com/us-east-1_your-user-pool-id
